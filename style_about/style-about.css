@@ -55,154 +55,38 @@ body{
     margin-left: 50px;
     transition: .4s;
 }
+.navbar::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 2s ease forwards;
+    animation-delay: .3s;
+}
 .navbar a:hover,
 .navbar a.active{
     border-bottom: 3px solid;
     color: #00abf0;
 }
 
-/* Content ME  */
-.home{
-    height: 100vh;
-    background: url(assets/FotoBg.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    padding: 0 15%;
-}
-.home-content{
-    
-}
-.home-content h1 {
-    position: relative;
-    font-size: 55px;
-    font-weight: 700;
+/* header content */
+.container-content h2{
     color: white;
-    line-height: 1.2;
+    border: 1px solid;
 }
-.home-content h1::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #081b29;
-    animation: showRight 2s ease forwards;
-    animation-delay: .3s;
-}
-.home-content h3{
-    position: relative;
-    font-size: 30px;
-    font-weight: 700;
-    color: gold;
-}
-.home-content h3::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #081b29;
-    animation: showRight 2s ease forwards;
-    animation-delay: .3s;
-}
-.home-content p {
-    position: relative;
-    font-size: 25px;
-    color: white;
-    margin: 20px 0 40px;
-}
-.home-content p::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #081b29;
-    animation: showRight 2s ease forwards;
-    animation-delay: .5s;
-}
-
-/* Button me */
-.home-content .btn-box{
-    position: relative;
+h2{
+    padding: 10%;
     display: flex;
-    justify-content: space-between;
-    width: 345px;
-    height: 50px;
-}
-.home-content .btn-box::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #081b29;
-    animation: showRight 2s ease forwards;
-    animation-delay: .5s;
-    z-index: 2;
-}
-.btn-box a {
-    position: relative;
     justify-content: center;
+    font-size: 2em;
+    font-family: 'Times New Roman';
     align-items: center;
-    display: inline-flex;
-    width: 150px;
-    height: 100%;
-    background: gold;
-    border: 2px solid black;
-    border-radius: 8px;
-    font-size: 19px;
-    color: #081b29;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
-    transition: .4s;
+    letter-spacing: 10px;
 }
-.btn-box a:hover{
-    color: gold;
-}
-.btn-box a:nth-child(2) {
-    background: transparent;
-    color: gold;
-}
-.btn-box a:nth-child(2):hover{
-    color: #081b29;
-}
-.btn-box a:nth-child(2)::before {
-    background: gold;
-}
-.btn-box a::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: #081b29;
-    z-index: -1;
-    transition: .4s;
-}
-.btn-box a:hover:before{
-    width: 100%;
-}
-
-/* Media Sosial */
-.home-sci{
-    position: absolute;
-    bottom: 145px;
-    width: 200px;
-    display: flex;
-    justify-content: space-between;
-}
-.home-sci::before{
+h2::before{
     content: "";
     position: absolute;
     top: 0;
@@ -210,83 +94,14 @@ body{
     width: 100%;
     height: 100%;
     background: #081b29;
-    animation: showRight 2s ease forwards;
+    animation: showAnimation 4s faded;
     animation-delay: .5s;
-    z-index: 2;
-}
-.home-sci a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 2px solid gold;
-    border-radius: 50%;
-    font-size: 20px;
-    color: gold;
-    text-decoration: none;
-    z-index: 1;
-    overflow: hidden;
-    transition: .4s;
-}
-.home-sci a:hover{
-    color: #081b29;
-}
-.home-sci a::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: gold;
-    z-index: -1;
-    transition: .4s;
-}
-.home-sci a:hover::before{
-    width: 100%;
-} 
 
-/* Image */
-.home-img{
-    position: absolute;
-    top: 0;
-    right: 35px;
-    width: 650px;
-    height: 100%;
-    background: transparent;
-    transition: 2s;
-    animation: animationImg .2s forwards;
-    animation-delay: .3s;
-    pointer-events: none;
-}
-.home-img::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 120%;
-    height: 100%;
-    background: #081b29;
-    animation: showRight 2s ease forwards;
-    animation-delay: .5s;
-    z-index: 100;
-}
-.home-img:hover{
-    background: #081b29;
-    opacity: 0.7;
 }
 
 /* Keyframe Logo */
 @keyframes showRight {
     100%{
         width: 0;
-    }
-}
-@keyframes animationImg {
-    100%{
-        pointer-events: auto;
     }
 }
